@@ -1,0 +1,117 @@
+using System;
+
+class Program {
+  public static void Main () {
+      int [] num;
+      int []num2;
+      int punto =0;
+      int punto_jugador2 =0;
+      num = new int[6];
+      num2 = new int[6];
+      for(int i =0; i<5; i++){
+        Random rand = new Random ();
+        int dado1 = rand.Next(1,6);
+        int dado2 = rand.Next(1,6);
+        String op;
+        Console.WriteLine ("oprima enter para tirar el primer dado");
+        op = Console.ReadLine();
+         Console.WriteLine ("oprima enter para tirar el segundo dado");
+        op = Console.ReadLine();
+         if (dado1 ==1){
+      
+        Console.WriteLine("jugador1: ");
+        Console.WriteLine("ganaste 1 punto");
+        punto =1;
+        num[i] = (punto);
+        Console.WriteLine(num[i]);
+        Console.WriteLine(" ");
+        }
+        if(dado1==2){
+          Console.WriteLine("ganaste 2 puntos");
+          Console.WriteLine("jugador1: ");
+          punto = 2;
+          num[i] = (punto);
+          Console.WriteLine(num[i]);
+         
+        }
+         if(dado1==3){
+          Console.WriteLine("perdiste 1 punto");
+          Console.WriteLine("jugador1: ");
+           int punto3;
+           punto3 = num[0]-1;
+           num[0]=(punto3);
+          Console.WriteLine(punto3);
+          
+        }
+         if(dado1==4){
+          Console.WriteLine("jugador1: ");
+          Console.WriteLine("ganaste 10 puntos");
+          punto = 10;
+          num[i] = (punto);
+          Console.WriteLine(num[i]);
+          
+        }
+          if(dado1==5){
+          Console.WriteLine("jugador1: ");
+           
+          Console.WriteLine("Multiplicaste  puntos");
+           
+            }
+         if(dado1==6){
+          Console.WriteLine("jugador1: ");
+          Console.WriteLine("Perdiste todos los puntos");
+          
+           }
+          if (dado2 ==1){
+        Console.WriteLine("jugador2: ");
+        Console.WriteLine("ganaste 1 punto");
+        punto_jugador2 =1;
+        num2[i] = (punto_jugador2);
+        Console.WriteLine(num2[i]);
+           
+        }
+        if(dado2==2){
+        
+          Console.WriteLine("jugador2: ");
+          Console.WriteLine("ganaste 2 puntos");
+          punto_jugador2 =2;
+          num2[i] = (punto_jugador2);
+          Console.WriteLine(num2[i]);
+        }
+         if(dado2==3){
+
+           int point3=0;
+          Console.WriteLine("jugador2: ");
+          Console.WriteLine("perdiste 1 punto");
+          point3=num2[0]-1;
+          num2[0] = (point3);
+          Console.WriteLine(point3);
+        }
+         if(dado2==4){
+          Console.WriteLine("jugador2: ");
+          Console.WriteLine("ganaste 10 puntos");
+          punto_jugador2 =10;
+          num2[i] = (punto_jugador2);
+          Console.WriteLine(num2[i]);
+        }
+         if(dado2==5){
+          Console.WriteLine("jugador2: ");
+          Console.WriteLine("Multiplicaste  puntos");
+           
+            }
+         if(dado2==6){
+          Console.WriteLine("jugador2: ");
+          Console.WriteLine("Perdiste todos los puntos");
+          
+           }
+       }
+     for(int i=0 ;i<1; i++){
+      int  total = 0;
+      int total2 =0;
+      total =num[0]+num[1]+num[2]+num[3]+num[4]+num[5];
+       Console.WriteLine("total del JUGADOR1: " +total+"PUNTOS");
+      total2 =num2[0]+num2[1]+num2[2]+num2[3]+num2[4]+num2[5];
+       Console.WriteLine("total del JUGADOR2: " +total2+"PUNTOS");
+       }
+}
+  }
